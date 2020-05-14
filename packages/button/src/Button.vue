@@ -1,5 +1,9 @@
 <template>
-  <button class="yu-button" :class="[`yu-button--${type}`, { 'is-plain': plain, 'is-round': round }]">
+  <button
+    @click="handleClick"
+    class="yl-button"
+    :class="[`yl-button--${type}`, { 'is-plain': plain, 'is-round': round }]"
+  >
     <span>
       <slot></slot>
     </span>
@@ -7,7 +11,7 @@
 </template>
 <script>
 export default {
-  name: "YuButton",
+  name: "YlButton",
   props: {
     type: {
       type: String,
@@ -20,13 +24,17 @@ export default {
     round: {
       type: Boolean,
       default: false
-    },
-    
+    }
+  },
+  methods: {
+    handleClick(event) {
+      this.$emit('click', event)
+    }
   }
 };
 </script>
 <style lang="scss" scoped>
-.yu-button {
+.yl-button {
   display: inline-block;
   margin: 0;
   padding: 12px 20px;
@@ -55,7 +63,7 @@ export default {
     background: #ecf5ff;
   }
 }
-.yu-button--primary {
+.yl-button--primary {
   background-color: #409eff;
   color: #fff;
   border-color: #409eff;
@@ -66,7 +74,7 @@ export default {
     border-color: #66b1ff;
   }
 }
-.yu-button--primary.is-plain {
+.yl-button--primary.is-plain {
   background-color: #ecf5ff;
   color: #a2a8ad;
   border-color: #b3d8ff;
@@ -77,7 +85,7 @@ export default {
     border-color: #66b1ff;
   }
 }
-.yu-button--primary.is-round {
+.yl-button--primary.is-round {
   padding: 12px 23px;
   border-radius: 20px;
 }

@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import App from './App.vue'
-import YuButton from './components/Button'
+import YounglessUI from '../packages/index'
 
 Vue.config.productionTip = false
 
-Vue.component(YuButton.name, YuButton)
+Vue.use(YounglessUI)
 
 new Vue({
   render: h => h(App)

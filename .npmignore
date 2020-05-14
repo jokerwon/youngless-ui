@@ -1,0 +1,9 @@
+# directory
+examples/
+packages/
+public/
+
+# file
+vue.config.js
+babel.config.js
+*.map

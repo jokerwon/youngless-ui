@@ -1,8 +1,21 @@
 // vue.config.js
 module.exports = {
-  configureWebpack: config => {
-    if (process.env.NODE_ENV === 'production') {
-    } else {
+  pages: {
+    index: {
+      entry: 'examples/main.js',
+      template: 'public/index.html',
+      filename: 'index.html'
     }
+  },
+  chainWebpack: config => {
+    config.module.rule('js')
+      .include
+      .add(__dirname + 'packages')
+      .end()
+      .use('babel')
+      .loader('babel-loader')
+      .tap(options => {
+        return options
+      })
   }
 }
