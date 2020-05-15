@@ -12,7 +12,8 @@ npm install youngless-ui -S
 
 ~~~vue
 import Vue from 'vue'
-import Youngless from 'element-ui'
+import Youngless from 'youngless-ui/lib/youngless-ui.umd'
+import 'youngless-ui/lib/youngless-ui.css'
 
 Vue.use(Youngless)
 ~~~
