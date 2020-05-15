@@ -4,7 +4,7 @@
     class="yl-button"
     :class="[`yl-button--${type}`, { 'is-plain': plain, 'is-round': round }]"
   >
-    <span v-if="$slot.default">
+    <span>
       <slot></slot>
     </span>
   </button>
