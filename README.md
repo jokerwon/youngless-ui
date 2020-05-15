@@ -20,5 +20,5 @@ Vue.use(Youngless)
 
 ## Special Thanks
 
-JokerWon（Myself）
-weiyuanqing
+- JokerWon
+- weiyuanqing
